@@ -30,6 +30,7 @@ def Menu_Log_In():
     Username_Log_In = input("Masukkan Username : ").strip()    
     print("Masukkan Password : ", end="")
     Password_Log_In = maskpass.advpass(prompt="", mask="*")
+    Menu_Utama_Penyewa.Menu_Utama_Penyewa()
     os.system("cls")
     opsi = [
         inquirer.List("Opsi Pilih Menu Log In", message="Apakah Anda ingin masuk?", choices=["Ya", "Tidak"])

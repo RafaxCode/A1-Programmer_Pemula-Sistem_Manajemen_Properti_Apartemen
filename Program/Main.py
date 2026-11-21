@@ -2,6 +2,10 @@ import os
 import inquirer
 
 import Autentikasi
+#fungsi dengan parameter (bukan prosedur) blum ada
+#Bikin tampilkan data/sembarang pake fungsi rekursif
+#Finally dan raise try sama else tidak ada
+
 
 Go_Out = False
 while not Go_Out:

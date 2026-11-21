@@ -103,5 +103,3 @@ def Pengaturan_Penitipan_Paket():
     # else tidak ada paket
     print('=' * 40)
     os.system("cls")
-
-Pengaturan_Penitipan_Paket()

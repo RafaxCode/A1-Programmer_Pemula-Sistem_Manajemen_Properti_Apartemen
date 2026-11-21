@@ -8,6 +8,8 @@ Data_Unit = {
     }
 }
 
+Daftar_Unit = {}
+
 Data_Akun = {
     260001 : {
         "Username" : "RafaxCode",
@@ -27,18 +29,7 @@ Data_Akun = {
     }
 }
 
-Data_Paket = {
-    1 : {
-        "Nama Penerima" : "RafaxCode",
-        "Nama Paket"    : "Badak Jawa",
-        "Status Paket"  : "Belum Sampai"
-    },
-    2 : {
-        "Nama Penerima" : "RafaxCode",
-        "Nama Paket"    : "Asbak Bali",
-        "Status Paket"  : "Sudah Sampai"
-    }
-}
+Data_Paket = {}
 
 Username_Admin = "Admin123"
 Password_Admin = "Code123"
