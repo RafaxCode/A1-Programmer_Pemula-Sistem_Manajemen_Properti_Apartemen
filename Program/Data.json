@@ -11,10 +11,10 @@
         "206": {
             "Tipe Unit": "Studio",
             "Harga Unit": 2000000,
-            "Status Unit": "Terisi",
-            "Nama Penghuni": "2",
-            "Status Bayar Sewa": "Belum",
-            "Nomor Kontak": "086712344334"
+            "Status Unit": "Kosong",
+            "Nama Penghuni": "-",
+            "Status Bayar Sewa": "Sudah Bayar",
+            "Nomor Kontak": "-"
         }
     },
     "Data Akun": {
@@ -36,7 +36,7 @@
         },
         "260003": {
             "Username": "2",
-            "Password": "21",
+            "Password": "2",
             "Nama Lengkap": "2",
             "No. Hp": "086712344334",
             "Unit Sewa": "-",
@@ -46,17 +46,17 @@
     "Data Paket": {
         "1": {
             "Nama Penerima": "RafaxCode",
-            "Nama Paket": "Badak Jawa",
-            "Status Paket": "Belum Sampai"
-        },
-        "2": {
-            "Nama Penerima": "RafaxCode",
             "Nama Paket": "Asbak Bali",
             "Status Paket": "Sudah Sampai"
+        },
+        "2": {
+            "Nama Penerima": "2",
+            "Nama Paket": "om",
+            "Status Paket": "Belum Sampai"
         }
     },
     "Daftar Pembayaran": {},
     "Username Admin": "Admin123",
     "Password Admin": "Code123",
-    "Simpanan Uang Admin": 9500000.0
+    "Simpanan Uang Admin": 11500000.0
 }
