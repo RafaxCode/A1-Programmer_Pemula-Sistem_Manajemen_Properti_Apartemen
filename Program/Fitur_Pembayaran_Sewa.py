@@ -90,5 +90,3 @@ def Fitur_Pembayaran_Sewa(Nama_Lengkap):
                 print("Pembayaran gagal, Uang Anda Tidak Cukup!")
                 print('=' * 40)
                 input("Tekan Enter Untuk Kembali")
-        elif Hasil_Opsi == "Kembali":
-            break
