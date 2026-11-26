@@ -66,6 +66,7 @@ def Lihat_Unit(kunci):
         print("=========================================================================================")
         if len(Data["Daftar Unit"]) == 0 or kunci is None or len(kunci) <= 0:
             print("Tidak Ada Data Unit Di Dalam Daftar")
+            print("-----------------------------------")
             input("Tekan 'Enter' untuk kembali")
             os.system("cls")
             return False
@@ -114,6 +115,7 @@ def Daftar_Unit(Nama_Penghuni, Kontak_Penghuni):
                 return
             try:
                 print("Masukkan 0 Jika Ingin Kembali")
+                print("-" * 110)
                 Nomor_Unit = input("Masukkan Nomor Unit: ")
                 if int(Nomor_Unit) == 0:
                     break
@@ -247,7 +249,7 @@ def Unit_Sewa(Nama_Penghuni):
                 isi["Nomor Kontak"] = "-"
         Simpan_Data()
         print("Kontrak Sewa Dibatalkan!")
-        print('=' * 40)
+        print('=' * 110)
         input("Tekan Enter Untuk Kembali")
         os.system("cls")
     elif Hasil_Opsi == "Tidak":
