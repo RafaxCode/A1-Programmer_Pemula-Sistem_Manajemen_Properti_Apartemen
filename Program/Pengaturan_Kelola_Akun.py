@@ -3,8 +3,12 @@ import inquirer
 import time
 import json
 
-with open("Program/Data.json", "r") as file:
-    Data = json.load(file)
+
+def Baca_Data():
+    global Data
+    with open("Program/Data.json", "r") as file:
+        Data = json.load(file)
+
 
 def Tampilan_Akun_Admin():
     os.system("cls")
@@ -38,6 +42,7 @@ def Countdown():
         detik -= 1
 
 def Pengaturan_Kelola_Akun():
+    Baca_Data()
     while True:
         Kesempatan = 3
         Tampilan_Akun_Admin()

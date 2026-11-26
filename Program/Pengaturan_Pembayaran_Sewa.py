@@ -3,8 +3,10 @@ import time
 from prettytable import PrettyTable
 import json
 
-with open("Program/Data.json", "r") as file:
-    Data = json.load(file)
+def Baca_Data():
+    global Data
+    with open("Program/Data.json", "r") as file:
+        Data = json.load(file)
 
 def Simpan_Data():
     with open("Program/Data.json", "w") as file:
@@ -12,6 +14,7 @@ def Simpan_Data():
 
 def Pengaturan_Pembayaran_Sewa():
     while True:
+        Baca_Data()
         os.system("cls")
         print("=" * 110)
         print("PENGATURAN PEMBAYARAN SEWA".center(110))

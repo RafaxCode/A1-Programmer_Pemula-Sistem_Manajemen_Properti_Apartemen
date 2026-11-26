@@ -1,5 +1,22 @@
 {
-    "Daftar Unit": {},
+    "Daftar Unit": {
+        "202": {
+            "Tipe Unit": "Studio",
+            "Harga Unit": 2000000,
+            "Status Unit": "Kosong",
+            "Nama Penghuni": "-",
+            "Status Bayar Sewa": "-",
+            "Nomor Kontak": "-"
+        },
+        "102": {
+            "Tipe Unit": "Studio",
+            "Harga Unit": 2000000,
+            "Status Unit": "Kosong",
+            "Nama Penghuni": "-",
+            "Status Bayar Sewa": "-",
+            "Nomor Kontak": "-"
+        }
+    },
     "Data Akun": {
         "260001": {
             "Username": "RafaxCode",

@@ -48,6 +48,7 @@ def Tampilkan_data_paket(Nama_User):
 
 def Fitur_Penitipan_Paket(Nama_User):
     while True:
+        Baca_Data()
         os.system("cls")
         print("=" * 110)
         print("PENITIPAN PAKET".center(110))
