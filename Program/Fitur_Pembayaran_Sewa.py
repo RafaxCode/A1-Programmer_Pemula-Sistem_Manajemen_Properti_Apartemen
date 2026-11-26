@@ -1,7 +1,6 @@
 import os
 import inquirer
 
-import Data
 import json
 
 with open("Program/Data.json", "r") as file:
