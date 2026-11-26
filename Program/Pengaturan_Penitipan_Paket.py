@@ -5,8 +5,10 @@ import inquirer
 from prettytable import PrettyTable
 import json
 
-with open("Program/Data.json", "r") as file:
-    Data = json.load(file)
+def Baca_Data():
+    global Data
+    with open("Program/Data.json", "r") as file:
+        Data = json.load(file)
 
 def Simpan_Data():
     with open("Program/Data.json", "w") as file:
@@ -40,6 +42,7 @@ def Tampilkan_data_paket():
 
 def Pengaturan_Penitipan_Paket():
     while True:
+        Baca_Data()
         os.system("cls")
         Ada_Paket = Tampilkan_data_paket()
 
