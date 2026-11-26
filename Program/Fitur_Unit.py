@@ -5,14 +5,17 @@ import time
 from prettytable import PrettyTable
 import json
 
-with open("Program/Data.json", "r") as file:
-    Data = json.load(file)
+def Baca_Data():
+    global Data
+    with open("Program/Data.json", "r") as file:
+        Data = json.load(file)
 
 def Simpan_Data():
     with open("Program/Data.json", "w") as file:
         json.dump(Data, file, indent=4)
 
 def Fitur_Unit(Nama_Penghuni, Kontak_Penghuni = "-"):
+    Baca_Data()
     os.system("cls")
     try:
         while True:
@@ -36,6 +39,7 @@ def Fitur_Unit(Nama_Penghuni, Kontak_Penghuni = "-"):
         return
 
 def cek_ketersediaan_unit():
+    Baca_Data()
     list_kunci = []
     for keys, values in sorted(Data["Daftar Unit"].items()):
         if values["Status Unit"] != "Terisi":
@@ -43,6 +47,7 @@ def cek_ketersediaan_unit():
     return list_kunci
 
 def cek_unit_penyewa(Nama_Penghuni):
+    Baca_Data()
     list_kunci = []
     for keys, values in sorted(Data["Daftar Unit"].items()):
         if values["Nama Penghuni"] == Nama_Penghuni:
@@ -53,11 +58,12 @@ def cek_unit_penyewa(Nama_Penghuni):
         return list_kunci
 
 def Lihat_Unit(kunci):
+    Baca_Data()
     try:
         os.system("cls")
-        print("=" * 110)
-        print("DAFTAR SELURUH UNIT YANG TERSEDIA".center(110))
-        print("=" * 110)
+        print("=========================================================================================")
+        print("                       DAFTAR SELURUH UNIT YANG TERSEDIA                                 ")
+        print("=========================================================================================")
         if len(Data["Daftar Unit"]) == 0 or kunci is None or len(kunci) <= 0:
             print("Tidak Ada Data Unit Di Dalam Daftar")
             print("-----------------------------------")
@@ -87,6 +93,7 @@ def Lihat_Unit(kunci):
         return False
 
 def Daftar_Unit(Nama_Penghuni, Kontak_Penghuni):
+    Baca_Data()
     try:
         os.system("cls")
         # di sini tampilkan daftar unit
@@ -172,6 +179,7 @@ def Daftar_Unit(Nama_Penghuni, Kontak_Penghuni):
 
 
 def Unit_Sewa(Nama_Penghuni):
+    Baca_Data()
     while True:
         try:
             os.system("cls")
