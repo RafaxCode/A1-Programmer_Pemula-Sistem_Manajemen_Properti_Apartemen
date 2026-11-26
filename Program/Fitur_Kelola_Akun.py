@@ -21,7 +21,6 @@ def Tampilan_Akun_Penyewa(Username_Log_In):
             print(f"No. Hp : {Data["Data Akun"][i]["No. Hp"]}")
             print(f"Unit Sewa : {Data["Data Akun"][i]["Unit Sewa"]}")
             print(f"Status Bayar Sewa : {Data["Data Akun"][i]["Status Bayar Sewa"]}")
-            print(f"Pesan Pengingat : {Data["Data Akun"][i]["Pesan Pengingat"]}")
     print("-" * 110)
 
 def Setup_Username_Baru_Penyewa():
@@ -62,7 +61,7 @@ def Fitur_Kelola_Akun(Username_Log_In):
 
 def Ganti_Username(Username_Log_In):
     global Username_Baru
-    Tampilan_Akun_Penyewa()
+    Tampilan_Akun_Penyewa(Username_Log_In)
     Username_Baru = input("Masukkan Username Baru : ").strip()
     opsi = [
         inquirer.List("Opsi Pilih Konfirmasi", message="Apakah Anda ingin mengganti dengan username ini?", choices=["Ya", "Tidak"])
@@ -90,6 +89,7 @@ def Ganti_Username(Username_Log_In):
                     print("Username berhasil diganti!")
                     print("--------------------------")
                     input("Tekan Enter Untuk Kembali")
+                    Simpan_Data()
     elif Hasil_Opsi == "Tidak":
         pass
 
@@ -126,6 +126,7 @@ def Ganti_Password(Username_Log_In, Kesempatan):
                                     print("Password telah diganti")
                                     print("-------------------------")
                                     input("Tekan Enter Untuk Kembali")
+                                    Simpan_Data()
                                     break
                     elif Hasil_Opsi == "Tidak":
                         pass

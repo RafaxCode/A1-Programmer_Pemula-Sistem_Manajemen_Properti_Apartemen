@@ -73,8 +73,8 @@ def Fitur_Pembayaran_Sewa(Nama_Lengkap):
             jawaban = inquirer.prompt(opsi)
             if jawaban is None:
                 break
-            Hasil_Opsi = jawaban["Opsi Pilih Bayar Sewa"] 
-
+            jawaban["Opsi Pilih Bayar Sewa"] 
+            Uang_Bayar = input("Masukkan Uang: ")
             if Uang_Bayar >= Tagihan_Sewa:
                 kembalian = Uang_Bayar - Tagihan_Sewa
                 Data["Simpanan Uang Admin"] += Tagihan_Sewa
