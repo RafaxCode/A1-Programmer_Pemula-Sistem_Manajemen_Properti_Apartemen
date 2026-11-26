@@ -18,7 +18,6 @@ def Tampilan_Akun_Penyewa(Username_Log_In):
     for i in Data["Data Akun"]:
         if Username_Log_In == Data["Data Akun"][i]["Username"]:
             print(f'Username : {Data["Data Akun"][i]["Username"]}')
-            print(f"Nama Lengkap : {Data["Data Akun"][i]["Nama Lengkap"]}")
             print(f"No. Hp : {Data["Data Akun"][i]["No. Hp"]}")
             print(f"Unit Sewa : {Data["Data Akun"][i]["Unit Sewa"]}")
             print(f"Status Bayar Sewa : {Data["Data Akun"][i]["Status Bayar Sewa"]}")

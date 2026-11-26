@@ -1,5 +1,7 @@
 import os
+import time
 import inquirer
+import json
 
 import Data
 import json
@@ -40,34 +42,38 @@ def Fitur_Pembayaran_Sewa(Nama_Lengkap):
     Tagihan_Sewa = int(Unit["Harga Unit"])
 
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        os.system("cls")
+        print('=' * 110)
+        print("PEMBAYARAN SEWA".center(110))
+        print('=' * 110)
+        Unit = None
+        Unit_Keys = 0
+        for i, Data_Kamar in Data["Daftar Unit"].items():
+            if Data_Kamar['Nama Penghuni'] == Nama_Lengkap:
+                Unit = Data_Kamar
+                Unit_Keys = i
 
-        # Tampilkan tagihan sewa
-        print('=' * 40)
-        print("PEMBAYARAN SEWA")
-        print('=' * 40)
-        print(f"Tagihan Sewa : Rp{Tagihan_Sewa}")
-        print(f"Status Bayar : {Unit['Status Bayar Sewa']}")
-        print('=' * 40)
-
-        opsi = [
-            inquirer.List("Opsi Pilih Bayar Sewa", message="Pilih Opsi", choices=["Bayar Sewa", "Kembali"])
-        ]
-        jawaban = inquirer.prompt(opsi)
-        if jawaban is None:  # Ctrl+C
+        # Apakah unit penyewa ditemukan?
+        if Unit is None:
+            print("Anda belum menyewa unit apa pun")
+            print('-------------------------------')
+            input("Tekan Enter Untuk Kembali")
             break
-        Hasil_Opsi = jawaban["Opsi Pilih Bayar Sewa"] 
+        else:
+            Tagihan_Sewa = int(Unit["Harga Unit"])
 
-        if Hasil_Opsi == "Bayar Sewa":
-            if Unit["Status Bayar Sewa"] == "Sudah Bayar":
-                print("Anda Sudah Bayar Sewa Bulan Ini!")
-                print('=' * 40)
-                input("Tekan Enter Untuk Kembali")
+            # Tampilkan tagihan sewa
+            print(f"Tagihan Sewa : Rp{Tagihan_Sewa}")
+            print(f"Status Bayar : {Unit['Status Bayar Sewa']}")
+            print('=' * 110)
+
+            opsi = [
+                inquirer.List("Opsi Pilih Bayar Sewa", message="Pilih Opsi", choices=["Bayar Sewa", "Kembali"])
+            ]
+            jawaban = inquirer.prompt(opsi)
+            if jawaban is None:
                 break
-            try:
-                Uang_Bayar = int(input("Masukkan Uang Bayar : Rp"))
-            except ValueError:
-                Uang_Bayar = 0  # input bukan angka dianggap pembayaran gagal
+            Hasil_Opsi = jawaban["Opsi Pilih Bayar Sewa"] 
 
             if Uang_Bayar >= Tagihan_Sewa:
                 kembalian = Uang_Bayar - Tagihan_Sewa
