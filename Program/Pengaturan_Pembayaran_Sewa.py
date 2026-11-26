@@ -38,7 +38,7 @@ def Pengaturan_Pembayaran_Sewa():
             print("=====Harap Masukkan Nomor Yang Valid=====")
             time.sleep(1)
             continue
-        if Nomor_Unit == "0":
+        if Nomor_Unit == 0:
             break
         if str(Nomor_Unit) not in Data["Daftar Unit"]:
             os.system("cls")

@@ -5,7 +5,7 @@
             "Harga Unit": 2500000,
             "Status Unit": "Terisi",
             "Nama Penghuni": "RafaxCode",
-            "Status Bayar Sewa": "Sudah Bayar",
+            "Status Bayar Sewa": "Belum",
             "Nomor Kontak": "-"
         },
         "206": {
@@ -24,7 +24,7 @@
             "Nama Lengkap": "rafa tarakan",
             "No. Hp": "081234567890",
             "Unit Sewa": "101",
-            "Status Bayar Sewa": "Belum Bayar"
+            "Status Bayar Sewa": "Sudah Bayar"
         },
         "260002": {
             "Username": "AFAN",
@@ -58,5 +58,5 @@
     "Daftar Pembayaran": {},
     "Username Admin": "Admin123",
     "Password Admin": "Code123",
-    "Simpanan Uang Admin": 7000000.0
+    "Simpanan Uang Admin": 9500000.0
 }

@@ -29,7 +29,7 @@ def Fitur_Unit(Nama_Penghuni, Kontak_Penghuni = "-"):
                 break
             Hasil_Opsi = jawaban["Opsi Pilih Fitur Unit"]
             if Hasil_Opsi == "Tampilkan Daftar Unit":
-                Daftar_Unit(Nama_Penghuni, Kontak_Penghuni)
+                Tampilkan_Unit(Nama_Penghuni, Kontak_Penghuni)
             elif Hasil_Opsi == "Unit Sewa Anda":
                 Unit_Sewa(Nama_Penghuni)
             elif Hasil_Opsi == "Kembali":
@@ -91,7 +91,7 @@ def Lihat_Unit(kunci):
         os.system("cls")
         return False
 
-def Daftar_Unit(Nama_Penghuni, Kontak_Penghuni):
+def Tampilkan_Unit(Nama_Penghuni, Kontak_Penghuni):
     Baca_Data()
     try:
         os.system("cls")
@@ -254,3 +254,6 @@ def Unit_Sewa(Nama_Penghuni):
         print("Aksi Dibatalkan")
         input("Tekan 'Enter' Untuk Kembali! ")
         os.system("cls")
+
+
+Fitur_Unit("RafaxCode")

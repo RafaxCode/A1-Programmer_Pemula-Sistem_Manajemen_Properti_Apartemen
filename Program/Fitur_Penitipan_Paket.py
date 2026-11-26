@@ -90,6 +90,7 @@ def Buat_Form(Nama_User):
     if Hasil_Opsi == "Ya":
         os.system("cls")
         Data["Data Paket"][f"{len(Data["Data Paket"]) + 1}"] = temporary_paket
+        Simpan_Data()
         print("Form telah dibuat")
         print('-------------------------')
         input('Tekan Enter Untuk Kembali') 

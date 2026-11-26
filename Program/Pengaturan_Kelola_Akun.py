@@ -109,7 +109,7 @@ def Ganti_Password(Kesempatan):
                     time.sleep(1)
                 else:
                     os.system("cls")
-                    Data["Password Admin"] = Username_Baru
+                    Data["Password Admin"] = Password_Baru
                     Simpan_Data()
                     print("Password berhasil diganti!")
                     print('=' * 110)
