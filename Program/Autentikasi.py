@@ -116,7 +116,6 @@ def Menu_Sign_In():
     print("=" * 110)
     Username_Sign_In = input("Masukkan Username : ").strip()    
     Password_Sign_In = input("Masukkan Password : ").strip()
-    Nama_Lengkap = input("Masukkan Nama Lengkap : ").strip() 
     No_Hp = input("Masukkann Nomor Hp : ").strip()
     print("-" * 110)
     opsi = [
@@ -133,7 +132,7 @@ def Menu_Sign_In():
                 print("=====Username sudah digunakan=====")
                 time.sleep(1)
                 break
-            elif not Username_Sign_In or not Password_Sign_In or not Nama_Lengkap or not No_Hp:
+            elif not Username_Sign_In or not Password_Sign_In or not No_Hp:
                 os.system("cls")
                 print("=====Input tidak boleh kosong=====")
                 time.sleep(1)
@@ -144,7 +143,6 @@ def Menu_Sign_In():
                 Data["Data Akun"][ID_Baru] = {
                     "Username" : Username_Sign_In,
                     "Password" : Password_Sign_In,
-                    "Nama Lengkap" : Nama_Lengkap,
                     "No. Hp" : No_Hp,
                     "Unit Sewa" : "-",
                     "Status Bayar Sewa" : "-"
