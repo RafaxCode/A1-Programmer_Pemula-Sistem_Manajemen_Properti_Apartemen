@@ -249,12 +249,10 @@ def Unit_Sewa(Nama_Penghuni):
                 isi["Nomor Kontak"] = "-"
         Simpan_Data()
         print("Kontrak Sewa Dibatalkan!")
-        print('=' * 40)
+        print('=' * 110)
         input("Tekan Enter Untuk Kembali")
         os.system("cls")
     elif Hasil_Opsi == "Tidak":
         print("Aksi Dibatalkan")
         input("Tekan 'Enter' Untuk Kembali! ")
         os.system("cls")
-
-Fitur_Unit("RafaxCode")
