@@ -45,7 +45,7 @@ def Pengaturan_Penitipan_Paket():
 
         if not Ada_Paket:
             print('-------------------------------')
-            input('Tekan Enter Untuk Kembali')
+            input('Tekan Enter Untuk Kembali ')
             break
 
         # pilih paket (label, nilai): nilai = nomor paket, None = kembali

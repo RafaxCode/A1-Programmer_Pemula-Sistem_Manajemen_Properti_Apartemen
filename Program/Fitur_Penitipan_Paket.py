@@ -3,8 +3,10 @@ import inquirer
 import time
 import json
 
-with open("Program/Data.json", "r") as file:
-    Data = json.load(file)
+def Baca_Data():
+    global Data
+    with open("Program/Data.json", "r") as file:
+        Data = json.load(file)
 
 def Simpan_Data():
     with open("Program/Data.json", "w") as file:
@@ -25,6 +27,7 @@ def susun_ulang_data_paket():
         Data["Data Paket"][nomor] = paket
 
 def Tampilkan_data_paket(Nama_User):
+    Baca_Data()
     global paket_personal_ada
     os.system("cls")
     paket_personal_ada = False
@@ -99,11 +102,13 @@ def Buat_Form(Nama_User):
 
 
 def Status_Paket(Nama_User):
+    Baca_Data()
     Tampilkan_data_paket(Nama_User)
     print('=' * 60)
     input('Tekan Enter Untuk Kembali')
 
 def Hapus_Form(Nama_User):
+    Baca_Data()
     Tampilkan_data_paket(Nama_User)
     if not paket_personal_ada:
         print('=' * 60)
@@ -114,6 +119,7 @@ def Hapus_Form(Nama_User):
         count = 0
         for value in Data["Data Paket"]:
             if Data["Data Paket"][value]["Nama Penerima"] == Nama_User:
+                kunci_data_paket = value
                 count += 1
                 list_paket_user.append(f"Paket # {count}")
         list_paket_user.append("Batal")
@@ -126,7 +132,6 @@ def Hapus_Form(Nama_User):
         if jawaban is None:
             return
         jawaban = jawaban["Opsi Paket Yang Ingin Dihapus"]
-        kunci_data_paket = int(jawaban[7:])
         if jawaban == "Batal":
             pass
         else:

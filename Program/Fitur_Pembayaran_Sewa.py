@@ -3,8 +3,10 @@ import inquirer
 
 import json
 
-with open("Program/Data.json", "r") as file:
-    Data = json.load(file)
+def Baca_Data():
+    global Data
+    with open("Program/Data.json", "r") as file:
+        Data = json.load(file)
 
 def Baca_Data():
     with open("Program/Data.json", "r") as file:
@@ -22,6 +24,7 @@ def cari_id_user(Nama_Lengkap):
             return keys
 
 def Fitur_Pembayaran_Sewa(Nama_Lengkap):
+    Baca_Data()
     Unit = None
     Unit_Keys = 0
     for i, Data_Kamar in Data["Daftar Unit"].items():

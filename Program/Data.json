@@ -1,22 +1,5 @@
 {
-    "Daftar Unit": {
-        "205": {
-            "Tipe Unit": "Studio",
-            "Harga Unit": 2500000,
-            "Status Unit": "Terisi",
-            "Nama Penghuni": "RafaxCode",
-            "Status Bayar Sewa": "Belum",
-            "Nomor Kontak": "-"
-        },
-        "206": {
-            "Tipe Unit": "Studio",
-            "Harga Unit": 2000000,
-            "Status Unit": "Kosong",
-            "Nama Penghuni": "-",
-            "Status Bayar Sewa": "Sudah Bayar",
-            "Nomor Kontak": "-"
-        }
-    },
+    "Daftar Unit": {},
     "Data Akun": {
         "260001": {
             "Username": "RafaxCode",
@@ -48,15 +31,10 @@
             "Nama Penerima": "RafaxCode",
             "Nama Paket": "Asbak Bali",
             "Status Paket": "Sudah Sampai"
-        },
-        "2": {
-            "Nama Penerima": "2",
-            "Nama Paket": "om",
-            "Status Paket": "Belum Sampai"
         }
     },
     "Daftar Pembayaran": {},
     "Username Admin": "Admin123",
     "Password Admin": "Code123",
-    "Simpanan Uang Admin": 13500000.0
+    "Simpanan Uang Admin": 11500000.0
 }
